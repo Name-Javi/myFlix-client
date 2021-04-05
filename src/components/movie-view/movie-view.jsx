@@ -1,14 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-
-import { Card, Button } from 'react-bootstrap';
-
-import './movie-view.scss';
+import React from "react";
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
+import { Card, Button } from "react-bootstrap";
+import "./movie-view.scss";
 
 export class MovieView extends React.Component {
   constructor() {
     super();
-
     this.state = {};
   }
 
@@ -17,51 +15,53 @@ export class MovieView extends React.Component {
 
     if (!movie) return null;
 
-    // if (this.state.initialState === '') return ;
-
     return (
-      <div className='movie-view'>
-        <Card style={{ width: '18rem' }}>
-          <Card.Img variant='top' src={movie.imagePath} />
+      <div className="movie-view">
+        <Card style={{ width: "18rem" }}>
+          <Card.Img variant="top" src={movie.ImagePath} />
           <Card.Body>
-            <Card.Title>{movie.title}</Card.Title>
+            <Card.Title>{movie.Title}</Card.Title>
             <Card.Text>
-              <span className='label text-danger'>Description: </span>
-              <span className='value'>{movie.description}</span>
+              <span className="label text-primary">Description: </span>
+              <span className="value">{movie.Description}</span>
             </Card.Text>
             <Card.Text>
-              <span className='label text-danger'>Genre: </span>
-              <span className='value'>{movie.genre.name}</span>
+              <span className="label" > <Link to={`/genres/${movie.Genre.Name}`}>
+            <Button variant="link">Genre:</Button>
+          </Link></span>
+              <span className="value">{movie.Genre.Name}</span>
             </Card.Text>
             <Card.Text>
-              <span className='label text-danger'>Director: </span>
-              <span className='value'>{movie.director.name}</span>
+              <span className="label"><Link to={`/directors/${movie.Director.Name}`}>
+            <Button variant="link">Director:</Button>
+          </Link> </span>
+              <span className="value">{movie.Director.Name}</span>
             </Card.Text>
-            <Button onClick={() => onClick()} variant='primary'>
-              Back
-            </Button>
+            <Link to={"/"}>
+              {" "}
+              <Button variant="dark">Back</Button>{" "}
+            </Link>
           </Card.Body>
         </Card>
       </div>
     );
   }
 }
-
 MovieView.propTypes = {
   movie: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    imagePath: PropTypes.string.isRequired,
-    genre: PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      description: PropTypes.string.isRequired,
+    // movie prop may contain Title, and IF it does, it must be a string
+    Title: PropTypes.string.isRequired,
+    Description: PropTypes.string,
+    Year: PropTypes.number,
+    ImagePath: PropTypes.string.isRequired,
+    Genre: PropTypes.shape({
+      Name: PropTypes.string,
+      Biography: PropTypes.string,
     }),
-    director: PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      bio: PropTypes.string.isRequired,
-      birth: PropTypes.string.isRequired,
-      death: PropTypes.string,
+    Director: PropTypes.shape({
+      Name: PropTypes.string,
+      Bio: PropTypes.string,
     }),
-  }).isRequired,
-  onClick: PropTypes.func.isRequired,
+    Featured: PropTypes.bool,
+  }),
 };
