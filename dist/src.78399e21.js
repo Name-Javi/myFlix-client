@@ -52451,8 +52451,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 var _default = {
-  API_URL: 'http://localhost:8080' // API_URL: `https://javisolismyflix.herokuapp.com`
-
+  //API_URL: 'http://localhost:8080',
+  API_URL: "https://javisolismyflix.herokuapp.com"
 };
 exports.default = _default;
 },{}],"components/profile-view/profile-view.scss":[function(require,module,exports) {
@@ -81335,7 +81335,7 @@ function (_React$Component) {
     value: function getMovies(token) {
       var _this2 = this;
 
-      _axios.default.get("http://localhost:8080/movies", {
+      _axios.default.get("https://javisolismyflix.herokuapp.com/movies", {
         headers: {
           Authorization: "Bearer ".concat(token)
         }
