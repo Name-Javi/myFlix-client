@@ -1,3 +1,7 @@
+.main-body {
+  margin-top: 100px;
+  margin-bottom: 250px;
+}
 .form-login {
   min-height: 100vh;
   display: flex;
@@ -24,10 +28,6 @@
 
 .label {
   font-weight: 900;
-}
-.main-body {
-  margin-top: 100px;
-  margin-bottom: 250px;
 }
 .my-flix {
   color: steelblue;
