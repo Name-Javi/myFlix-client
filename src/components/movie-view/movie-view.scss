@@ -1,0 +1,12 @@
+.movie-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 300px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.movie-poster {
+  height: 250px;
+  width: 100%;
+  cursor: pointer;
+}
