@@ -26,7 +26,7 @@ import {
   Jumbotron,
   Button,
 } from "react-bootstrap";
-import { FaSearch } from "react-icons/fa";
+
 
 export class MainView extends React.Component {
   constructor() {
