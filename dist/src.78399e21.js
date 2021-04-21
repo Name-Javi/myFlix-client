@@ -55664,7 +55664,7 @@ function (_React$Component) {
         }
       }), _react.default.createElement(_reactRouterDom.Route, {
         exact: true,
-        path: "/users/:username",
+        path: "/users/".concat(user),
         render: function render(_ref4) {
           var history = _ref4.history;
           if (!user) return _react.default.createElement(_loginView.LoginView, {

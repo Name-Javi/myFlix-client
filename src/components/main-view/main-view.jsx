@@ -201,7 +201,7 @@ export class MainView extends React.Component {
 
             <Route
               exact
-              path="/users/:username"
+              path={`/users/${user}`}
               render={({ history }) => {
                 if (!user)
                   return (
