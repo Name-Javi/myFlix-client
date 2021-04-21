@@ -55100,7 +55100,7 @@ function (_React$Component) {
 
       var username = localStorage.getItem('user');
 
-      _axios.default.get("https://javisolismyflix.herokuapp.com/movies/users/".concat(username), {
+      _axios.default.get("https://javisolismyflix.herokuapp.com/users/".concat(username), {
         headers: {
           Authorization: "Bearer ".concat(token)
         }
@@ -55125,7 +55125,7 @@ function (_React$Component) {
       var username = localStorage.getItem('user');
       var token = localStorage.getItem('token');
 
-      _axios.default.delete("https://javisolismyflix.herokuapp.com/movies/users/".concat(username, "/movies/").concat(movie), {
+      _axios.default.delete("https://javisolismyflix.herokuapp.com/users/".concat(username, "/movies/").concat(movie), {
         headers: {
           Authorization: "Bearer ".concat(token)
         }
@@ -55873,7 +55873,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62728" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63742" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
