@@ -55595,7 +55595,8 @@ function (_React$Component) {
       }, _react.default.createElement(_reactBootstrap.Nav, {
         className: "justify-content-end"
       }, _react.default.createElement(_reactBootstrap.Nav.Link, {
-        href: "/users/".concat(user)
+        as: _reactRouterDom.Link,
+        to: "/users/".concat(user)
       }, "My Account")), _react.default.createElement(_reactBootstrap.Button, {
         onClick: function onClick() {
           return _this3.logOut();
@@ -55873,7 +55874,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63742" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61880" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

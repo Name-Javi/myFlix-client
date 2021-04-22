@@ -12,6 +12,7 @@ import { MovieView } from "../movie-view/movie-view";
 import { DirectorView } from "../director-view/director-view";
 import { GenreView } from "../genre-view/genre-view";
 import { ProfileView } from "../profile-view/profile-view";
+import { Link } from "react-router-dom";
 
 
 import {
@@ -135,7 +136,7 @@ export class MainView extends React.Component {
             <Navbar.Toggle />
             <Navbar.Collapse className="justify-content-end">
               <Nav className="justify-content-end">
-                <Nav.Link href={`/users/${user}`}>My Account</Nav.Link>
+                <Nav.Link as={Link} to={`/users/${user}`}>My Account</Nav.Link>
               </Nav>
               <Button onClick={() => this.logOut()} variant="secondary">
                 Log Out
